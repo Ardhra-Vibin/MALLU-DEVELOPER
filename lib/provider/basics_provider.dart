@@ -12,6 +12,9 @@ class BasicProvider extends ChangeNotifier{
  //STUDENT PASS PROGRAM
 TextEditingController studentCon = TextEditingController();
 String result = '';
+int count = 0;
+List<String> actorsNames = ["a","b","c"];
+int listCount = 0;
 
  resultStudent(value) {
   print(studentCon.toString());
@@ -28,5 +31,21 @@ String result = '';
    result = "STUDENT FAILED";
   }
  }
+ //WHILE
+print10(){
+  while(count<=10){
+   count = count +1;
+   print(count);
+  }
+}
  notifyListeners();
+ printList(){
+  print(actorsNames.length);
+  while(listCount < actorsNames.length){
+   print(actorsNames[listCount]);
+   listCount = listCount + 1;
+   notifyListeners();
+  }
+  notifyListeners();
+ }
 }
